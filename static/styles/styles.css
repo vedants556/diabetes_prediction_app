@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1');
@@ -81,6 +80,30 @@ h2 {
     font-size: 1.5em;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden; /* Prevents rounded corners from being cut off */
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -89,4 +112,3 @@ h2 {
         padding: 15px;
     }
 }
-
