@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="model">Choose a model:</label>
+        <select name="model" required>
+            <option value="logistic">Logistic Regression</option>
+            <option value="decision_tree">Decision Tree</option>
+            <option value="knn">K-Nearest Neighbors</option>
+            <option value="random_forest">Random Forest</option>
+            <option value="gradient_boosting">Gradient Boosting</option>
+            <option value="svc">Support Vector Classifier</option>
+            <option value="naive_bayes">Naive Bayes</option>
+            <option value="adaboost">AdaBoost</option>
+            <option value="xgboost">XGBoost</option>
+            <option value="extra_trees">Extra Trees</option>
+        </select>
+
+        <label for="pregnancies">Pregnancies:</label>
+        <input type="number" name="pregnancies" min="0" required>
+
+        <label for="glucose">Glucose:</label>
+        <input type="number" name="glucose" min="0" required>
+
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="number" name="blood_pressure" min="0" required>
+
+        <label for="skin_thickness">Skin Thickness:</label>
+        <input type="number" name="skin_thickness" min="0" required>
+
+        <label for="insulin">Insulin:</label>
+        <input type="number" name="insulin" min="0" required>
+
+        <label for="bmi">BMI:</label>
+        <input type="number" step="0.1" name="bmi" min="0" required>
+
+        <label for="diabetes_pedigree_function">Diabetes Pedigree Function:</label>
+        <input type="number" step="0.001" name="diabetes_pedigree_function" min="0" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" min="0" required>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
