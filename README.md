@@ -73,7 +73,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name
 - GitHub: [@vedants556](https://github.com/vedants556)
-- LinkedIn: [Your LinkedIn](www.linkedin.com/in/vedant-shelar-41923724b)
+- LinkedIn: [vedant-shelar](www.linkedin.com/in/vedant-shelar-41923724b)
 
 ## 🙏 Acknowledgements
 
